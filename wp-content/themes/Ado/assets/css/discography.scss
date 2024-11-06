@@ -1,0 +1,93 @@
+.albumBox {
+    display: flex;
+    flex-direction: column; // Stack elements vertically
+    margin: 2rem 0; // Default spacing
+
+    // Styles for odd albums
+    &.odd {
+        margin-top: 4rem; // Adjust margin for odd albums if needed
+    }
+
+    // Styles for even albums
+    &.even {
+        margin-top: 1rem; // Adjust margin for even albums if needed
+    }
+
+    .mini-page-header {
+        text-transform: uppercase;
+        font-size: clamp(1.2rem, 3vw, 2rem);
+        font-weight: 900;
+        text-align: center;
+        font-family: PlayFair;
+
+        &.lowercase {
+            text-transform: initial;
+        }
+    }
+
+    .album-content {
+        display: flex; // Use flexbox to align cover image and songs side by side
+        align-items: center; // Align items to the start
+        justify-content: center;
+        position: relative; // Reference for the pseudo-element
+        margin: 5vh 12.5% 0 0;
+
+        // Adjustments for vertical line placement
+        hr.vertical-row {
+            background-color: #ffffff; // Color of the line
+            height: 80%; // Adjust the height for how tall you want the line to be
+            width: 2px; // Thickness of the line
+            position: absolute; // Absolute positioning to center it
+            left: 50%; // Center it horizontally
+            transform: translateX(-50%); // Adjust for its own width
+            z-index: 1; // Ensure it is above other elements
+        }
+
+        .cover-container {
+            img {
+                max-width: 400px; // Set a fixed width for the album cover
+                height: auto; // Maintain aspect ratio
+            }
+        }
+
+        .songs-container {
+            ol {
+                list-style-type: none; // Remove default list styling
+                padding-left: 0; // Remove padding
+            }
+
+            li {
+                margin-bottom: 0.5rem; // Space between song items
+                a {
+                    text-decoration: none; // Remove underline
+                    color: inherit; // Use the default text color
+                    transition: color 0.3s;
+
+                    &:hover {
+                        color: lightblue; // Change color on hover
+                    }
+                }
+            }
+        }
+    }
+}
+
+.horizontal-row {
+    background-color: #ffffff;
+    height: 2px;
+    width: 40%;
+    margin: 1.5rem auto;
+}
+
+.mini-horizontal-row {
+    background-color: #ffffff;
+    height: 2px;
+    width: 30%;
+    margin: 1.5rem auto;
+}
+
+hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+}

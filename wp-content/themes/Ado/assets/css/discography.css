@@ -1,0 +1,76 @@
+.albumBox {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+.albumBox.odd {
+  margin-top: 4rem;
+}
+.albumBox.even {
+  margin-top: 1rem;
+}
+.albumBox .mini-page-header {
+  text-transform: uppercase;
+  font-size: clamp(1.2rem, 3vw, 2rem);
+  font-weight: 900;
+  text-align: center;
+  font-family: PlayFair;
+}
+.albumBox .mini-page-header.lowercase {
+  text-transform: initial;
+}
+.albumBox .album-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 5vh 12.5% 0 0;
+}
+.albumBox .album-content hr.vertical-row {
+  background-color: #ffffff;
+  height: 80%;
+  width: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+.albumBox .album-content .cover-container img {
+  max-width: 400px;
+  height: auto;
+}
+.albumBox .album-content .songs-container ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+.albumBox .album-content .songs-container li {
+  margin-bottom: 0.5rem;
+}
+.albumBox .album-content .songs-container li a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s;
+}
+.albumBox .album-content .songs-container li a:hover {
+  color: lightblue;
+}
+
+.horizontal-row {
+  background-color: #ffffff;
+  height: 2px;
+  width: 40%;
+  margin: 1.5rem auto;
+}
+
+.mini-horizontal-row {
+  background-color: #ffffff;
+  height: 2px;
+  width: 30%;
+  margin: 1.5rem auto;
+}
+
+hr {
+  height: 0;
+  color: inherit;
+  border-top-width: 1px;
+}/*# sourceMappingURL=discography.css.map */

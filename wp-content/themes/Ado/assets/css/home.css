@@ -1,0 +1,66 @@
+@font-face {
+  font-family: PlayFair;
+  src: url("../fonts/playfair.ttf");
+}
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/inter.ttf);
+}
+.homepage-img-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.homepage-img-container .homepage-img-zoom {
+  width: 100%;
+  margin: 0 auto;
+  aspect-ratio: 6/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.3s;
+  display: block;
+}
+.homepage-img-container .homepage-img-zoom:hover {
+  transform: scale(1.02);
+}
+
+.home-section {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.home-section .home-content {
+  display: flex;
+  width: -moz-fit-content;
+  width: fit-content;
+  align-items: center;
+  margin: 0 auto;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.home-section .home-content .home-text {
+  border: 3px solid #006896;
+  padding: 1rem;
+  width: 100%;
+  max-width: 500px;
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
+  font-family: Inter;
+}
+.home-section .home-content .home-img {
+  width: 100%;
+  max-width: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3px solid #49f9f9;
+}
+.home-section .home-content .home-img.purple {
+  border-color: #5b18c7;
+}
+.home-section .home-content .home-img.light-purple {
+  border-color: #9880f1;
+}/*# sourceMappingURL=home.css.map */

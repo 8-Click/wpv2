@@ -1,0 +1,73 @@
+@import "./variables";
+
+.news-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .news-post {
+        border: 3px solid $primaryColor;
+        border-radius: 10px;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column; // Default to column layout for news
+        gap: 1rem;
+
+        .news-title {
+            text-align: center;
+            font-size: $xlText;
+        }
+
+        .news-content {
+            white-space: pre-wrap;
+        }
+
+        .news-date {
+            color: rgba($color: #FFFFFF, $alpha: .4);
+            margin-top: 1rem;
+        }
+    }
+
+    // Common styles for images
+    .news-img {
+        border: 3px solid $primaryColor;
+        border-radius: 10px;
+    }
+}
+
+// Specific styles for Blog Posts
+.blog-post {
+    display: flex; // Use flexbox for blog layout
+    flex-direction: row; // Keep image and text side by side
+
+    .news-content-wrapper {
+        display: flex; // Align image and text in a row
+        gap: 1rem; // Space between image and text
+
+        .news-img {
+            max-width: 400px; // Limit image width
+            height: auto; // Maintain original aspect ratio
+            object-fit: contain; // Prevent stretching
+            border: 3px solid $primaryColor;
+            border-radius: 10px;
+            flex-shrink: 0; // Prevent image from shrinking
+        }
+
+        .news-text {
+            flex: 1; // Allow text to take remaining space
+        }
+    }
+}
+
+// Styles for News Posts to override blog styles
+.news-post {
+    // Flexbox behavior is already set to column by default
+    // No need to redefine as it's already in column direction
+    &.has-image {
+        flex-direction: column; // Ensure it stacks vertically if there's an image
+    }
+}

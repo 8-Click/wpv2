@@ -1,0 +1,62 @@
+@font-face {
+  font-family: PlayFair;
+  src: url("../fonts/playfair.ttf");
+}
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/inter.ttf);
+}
+.hall-of-fame-container {
+  background-image: url("../img/backgrounds/bg1.png");
+  padding: 2rem;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+.hof-items {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.hof-item {
+  width: 100%;
+  border: 3px solid #006896;
+  padding: 1rem;
+}
+.hof-item.open .hof-message {
+  display: block;
+}
+.hof-item.open .hof-dropdown-btn {
+  transform: translateY(0) rotate(180deg);
+}
+.hof-item .hof-message {
+  display: none;
+  padding: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+.hof-item .hof-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.hof-item .hof-profile .hof-img {
+  width: 80px;
+  aspect-ratio: 1/1;
+  border: 3px solid rgb(255, 230, 0);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.hof-item .hof-dropdown-btn {
+  margin: 0 auto;
+  display: block;
+  transform: translateY(-50%);
+  transition: transform 0.3s;
+}/*# sourceMappingURL=hall-of-fame.css.map */

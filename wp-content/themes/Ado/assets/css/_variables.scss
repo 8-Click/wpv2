@@ -1,0 +1,50 @@
+$primaryColor: #006896;
+$backgroundColor: #1b1b1d;
+$regularText: clamp(1.3rem, 2vw, 1.5rem);
+$xlText: clamp(1.5rem, 4vw, 3rem);
+
+@mixin grid-min-max-cols(
+    $min-cols,
+    $max-cols,
+    $cols-min-width,
+    $grid-row-gap: 0px,
+    $grid-column-gap: 0px
+) {
+    --min-cols: #{$min-cols};
+    --max-cols: #{$max-cols};
+    --cols-min-width: #{$cols-min-width};
+    --grid-row-gap: #{$grid-row-gap};
+    --grid-column-gap: #{$grid-column-gap};
+
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(
+            min(
+                (
+                    100% / var(--min-cols) - var(--grid-column-gap) *
+                        (var(--min-cols) - 1) / var(--min-cols)
+                ),
+                max(
+                    var(--cols-min-width),
+                    (
+                        100% / var(--max-cols) - var(--grid-column-gap) *
+                            (var(--max-cols) - 1) / var(--max-cols)
+                    )
+                )
+            ),
+            1fr
+        )
+    );
+    gap: var(--grid-row-gap) var(--grid-column-gap);
+}
+
+@font-face {
+    font-family: PlayFair;
+    src: url("../fonts/playfair.ttf");
+}
+
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/inter.ttf);
+}

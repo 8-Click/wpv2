@@ -1,0 +1,78 @@
+@font-face {
+  font-family: PlayFair;
+  src: url("../fonts/playfair.ttf");
+}
+@font-face {
+  font-family: Inter;
+  src: url(../fonts/inter.ttf);
+}
+.currency-select-container {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  margin: 0 auto;
+}
+.currency-select-container select {
+  color: black;
+}
+
+.merch-items-container {
+  --min-cols: 2;
+  --max-cols: 5;
+  --cols-min-width: 200px;
+  --grid-row-gap: 2rem;
+  --grid-column-gap: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100% / var(--min-cols) - var(--grid-column-gap) * (var(--min-cols) - 1) / var(--min-cols), max(var(--cols-min-width), 100% / var(--max-cols) - var(--grid-column-gap) * (var(--max-cols) - 1) / var(--max-cols))), 1fr));
+  gap: var(--grid-row-gap) var(--grid-column-gap);
+}
+.merch-items-container .merch-item .merch-img {
+  width: 100%;
+}
+
+.merch-container {
+  display: flex;
+  padding: 2rem;
+  gap: 2rem;
+}
+@media screen and (max-width: 500px) {
+  .merch-container {
+    flex-direction: column-reverse;
+  }
+  .merch-container .merch-info {
+    margin: 0 auto;
+  }
+}
+.merch-container .merch-info {
+  max-width: 300px;
+  border: 4px solid #006896;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 1rem;
+}
+.merch-container .merch-info .merch-info-title {
+  font-family: PlayFair;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+.merch-container .merch-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.merch-container .merch-item a, .merch-container .merch-item p {
+  text-align: center;
+}
+.merch-container .merch-item a {
+  color: lightblue;
+  text-decoration: none;
+}
+.merch-container .merch-item .merch-price {
+  font-family: PlayFair;
+}
+
+.merch-wrapper {
+  padding: 2rem 0;
+}/*# sourceMappingURL=merch.css.map */
